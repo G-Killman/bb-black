@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{BUSINESS_NAME}} — Gallery</title>
+    <title>Bayou Bytes Gulf Coast — Gallery</title>
     <link rel="stylesheet" href="styles.css">
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
@@ -12,54 +12,22 @@
     <!-- Sticky site header containing business name and phone number -->
     <header class="site-header">
       <!-- Business name in header, links back to homepage -->
-      <a href="index.html" class="text-header">{{BUSINESS_NAME}}</a>
+      <a href="index.html" class="text-header">Bayou Bytes Gulf Coast</a>
       <!-- Business phone number, shown site-wide in header, links to tel: -->
-      <a href="tel:{{PHONE_NUMBER}}" class="text-header">{{PHONE_NUMBER}}</a>
+      <a href="tel:2282098895" class="text-header">228-209-8895</a>
     </header>
 
     <!-- Gallery page hero with heading and back-to-home link -->
     <section class="gallery-page-hero">
       <!-- Page heading for the gallery -->
-      <h1>{{BUSINESS_NAME}} Gallery</h1>
+      <h1>Bayou Bytes Gulf Coast Gallery</h1>
       <!-- Link back to the homepage -->
       <a href="index.html" class="cta-button">← Back to Home</a>
     </section>
 
-    <!-- Responsive grid of gallery category cards -->
+    <!-- Responsive grid of gallery category cards, populated by gallery.js -->
     <section class="gallery-grid-section">
-
-      <!-- EXAMPLE: the three cards below are sample placeholders — replace with real categories -->
-
-      <!-- REPEAT: gallery category card -->
-      <a href="{{GALLERY_CATEGORY_1_LINK}}" class="gallery-card">
-        <!-- Category thumbnail image -->
-        <div class="gallery-thumb">
-          <img src="{{GALLERY_CATEGORY_1_IMG_SRC}}" alt="{{GALLERY_CATEGORY_1_IMG_ALT}}">
-        </div>
-        <!-- Category label displayed beneath the thumbnail -->
-        <p class="gallery-card-label">{{GALLERY_CATEGORY_1_NAME}}</p>
-      </a>
-
-      <!-- REPEAT: gallery category card -->
-      <a href="{{GALLERY_CATEGORY_2_LINK}}" class="gallery-card">
-        <!-- Category thumbnail image -->
-        <div class="gallery-thumb">
-          <img src="{{GALLERY_CATEGORY_2_IMG_SRC}}" alt="{{GALLERY_CATEGORY_2_IMG_ALT}}">
-        </div>
-        <!-- Category label displayed beneath the thumbnail -->
-        <p class="gallery-card-label">{{GALLERY_CATEGORY_2_NAME}}</p>
-      </a>
-
-      <!-- REPEAT: gallery category card -->
-      <a href="{{GALLERY_CATEGORY_3_LINK}}" class="gallery-card">
-        <!-- Category thumbnail image -->
-        <div class="gallery-thumb">
-          <img src="{{GALLERY_CATEGORY_3_IMG_SRC}}" alt="{{GALLERY_CATEGORY_3_IMG_ALT}}">
-        </div>
-        <!-- Category label displayed beneath the thumbnail -->
-        <p class="gallery-card-label">{{GALLERY_CATEGORY_3_NAME}}</p>
-      </a>
-
+      <div id="gallery-grid"></div>
     </section>
 
     <!-- Site footer: copyright, Instagram link, Facebook link -->
@@ -73,5 +41,7 @@
     </footer>
 
     <script src="scroll.js"></script>
+    <script src="gallery-data.js"></script>
+    <script src="gallery.js"></script>
   </body>
 </html>

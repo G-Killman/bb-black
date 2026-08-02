@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{BUSINESS_NAME}} — Gallery</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+
+    <header class="site-header">
+      <a href="index.html" class="text-header">{{BUSINESS_NAME}}</a>
+      <a href="tel:{{PHONE_NUMBER}}" class="text-header">{{PHONE_NUMBER}}</a>
+    </header>
+
+    <section class="gallery-page-hero">
+      <h1 id="category-title">Gallery</h1>
+      <a href="gallery.html" class="cta-button">← Back to Gallery</a>
+    </section>
+
+    <section class="category-grid-section">
+      <div id="category-grid"></div>
+    </section>
+
+    <!-- Lightbox overlay -->
+    <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Image lightbox">
+      <button class="lightbox-close" id="lightbox-close" aria-label="Close">&times;</button>
+      <img id="lightbox-img" class="lightbox-img" src="" alt="">
+      <div class="lightbox-nav">
+        <button class="lightbox-prev" id="lightbox-prev" aria-label="Previous image">&#8592;</button>
+        <button class="lightbox-next" id="lightbox-next" aria-label="Next image">&#8594;</button>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+      <p class="text-footer">{{COPYRIGHT_NOTICE}}</p>
+      <a href="{{INSTAGRAM_URL}}" target="_blank" rel="noopener noreferrer" class="text-footer-link">Instagram</a>
+      <a href="{{FACEBOOK_URL}}" target="_blank" rel="noopener noreferrer" class="text-footer-link">Facebook</a>
+    </footer>
+
+    <script src="scroll.js"></script>
+    <script src="gallery-data.js"></script>
+    <script src="gallery-category.js"></script>
+  </body>
+</html>

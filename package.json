@@ -1,0 +1,12 @@
+{
+  "name": "image-pipeline",
+  "version": "1.0.0",
+  "description": "Image processing pipeline",
+  "main": "process-images.js",
+  "scripts": {
+    "process": "node process-images.js"
+  },
+  "dependencies": {
+    "sharp": "^0.35.3"
+  }
+}
