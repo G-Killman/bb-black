@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{BUSINESS_NAME}} — Gallery</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+
+    <!-- Sticky site header containing business name and phone number -->
+    <header class="site-header">
+      <!-- Business name in header, links back to homepage -->
+      <a href="index.html" class="text-header">{{BUSINESS_NAME}}</a>
+      <!-- Business phone number, shown site-wide in header, links to tel: -->
+      <a href="tel:{{PHONE_NUMBER}}" class="text-header">{{PHONE_NUMBER}}</a>
+    </header>
+
+    <!-- Gallery page hero with heading and back-to-home link -->
+    <section class="gallery-page-hero">
+      <!-- Page heading for the gallery -->
+      <h1>{{BUSINESS_NAME}} Gallery</h1>
+      <!-- Link back to the homepage -->
+      <a href="index.html" class="cta-button">← Back to Home</a>
+    </section>
+
+    <!-- Responsive grid of gallery category cards -->
+    <section class="gallery-grid-section">
+
+      <!-- EXAMPLE: the three cards below are sample placeholders — replace with real categories -->
+
+      <!-- REPEAT: gallery category card -->
+      <a href="{{GALLERY_CATEGORY_1_LINK}}" class="gallery-card">
+        <!-- Category thumbnail image -->
+        <div class="gallery-thumb">
+          <img src="{{GALLERY_CATEGORY_1_IMG_SRC}}" alt="{{GALLERY_CATEGORY_1_IMG_ALT}}">
+        </div>
+        <!-- Category label displayed beneath the thumbnail -->
+        <p class="gallery-card-label">{{GALLERY_CATEGORY_1_NAME}}</p>
+      </a>
+
+      <!-- REPEAT: gallery category card -->
+      <a href="{{GALLERY_CATEGORY_2_LINK}}" class="gallery-card">
+        <!-- Category thumbnail image -->
+        <div class="gallery-thumb">
+          <img src="{{GALLERY_CATEGORY_2_IMG_SRC}}" alt="{{GALLERY_CATEGORY_2_IMG_ALT}}">
+        </div>
+        <!-- Category label displayed beneath the thumbnail -->
+        <p class="gallery-card-label">{{GALLERY_CATEGORY_2_NAME}}</p>
+      </a>
+
+      <!-- REPEAT: gallery category card -->
+      <a href="{{GALLERY_CATEGORY_3_LINK}}" class="gallery-card">
+        <!-- Category thumbnail image -->
+        <div class="gallery-thumb">
+          <img src="{{GALLERY_CATEGORY_3_IMG_SRC}}" alt="{{GALLERY_CATEGORY_3_IMG_ALT}}">
+        </div>
+        <!-- Category label displayed beneath the thumbnail -->
+        <p class="gallery-card-label">{{GALLERY_CATEGORY_3_NAME}}</p>
+      </a>
+
+    </section>
+
+    <!-- Site footer: copyright, Instagram link, Facebook link -->
+    <footer class="site-footer">
+      <!-- Copyright notice with business name and current year -->
+      <p class="text-footer">{{COPYRIGHT_NOTICE}}</p>
+      <!-- Link to business Instagram profile -->
+      <a href="{{INSTAGRAM_URL}}" target="_blank" rel="noopener noreferrer" class="text-footer-link">Instagram</a>
+      <!-- Link to business Facebook profile -->
+      <a href="{{FACEBOOK_URL}}" target="_blank" rel="noopener noreferrer" class="text-footer-link">Facebook</a>
+    </footer>
+
+    <script src="scroll.js"></script>
+  </body>
+</html>

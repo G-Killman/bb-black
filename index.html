@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bayou Bytes Gulf Coast</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+
+    <!-- Sticky site header containing business name and phone number -->
+    <header class="site-header">
+      <!-- Business name in header, links to top of page -->
+      <a href="#top" class="text-header">Bayou Bytes Gulf Coast</a>
+      <!-- Business phone number, shown site-wide in header, links to tel: -->
+      <a href="tel:2282098895" class="text-header">228-209-8895</a>
+      <!-- Button in header that jumps to the contact form -->
+      <a href="#contact" class="cta-button">Contact</a>
+    </header>
+
+    <!-- Hero section: full-width intro with business name, tagline, and primary CTA -->
+    <section id="top" class="hero">
+      <!-- Primary business name heading displayed in hero -->
+      <h1 class="text-hero">Bayou Bytes Gulf Coast</h1>
+      <!-- Short tagline or value proposition shown below the business name -->
+      <p class="text-hero-sub">Portfolio-Inspired Websites — Your Gallery, Your Growth.</p>
+      <!-- Primary call-to-action button linking to the gallery page -->
+      <a href="gallery.html" class="cta-button hero-cta">No Obligation</a>
+    </section>
+
+    <!-- Services section: highlights the main services offered -->
+    <section class="services-section">
+      <!-- Section heading for the services list -->
+      <h2 class="services-heading">What We Offer</h2>
+      <!-- Unordered list of services; each item is a repeatable block -->
+      <ul class="services-list">
+
+        <!-- REPEAT: service item -->
+        <li>
+          <!-- Decorative bullet marker with accent color -->
+          <span class="text-accent">•</span>
+          Website Leasing
+        </li>
+
+        <!-- REPEAT: service item -->
+        <li>
+          <span class="text-accent">•</span>
+          Large Photo Gallery — Up to 300 Images Across 12 Categories, So You Can Organize and Get the Most From Your Portfolio
+        </li>
+
+        <!-- REPEAT: service item -->
+        <li>
+          <span class="text-accent">•</span>
+          Hosting, Management & Updates — Your Digital Storefront Secured Online and Working for You 24/7. If Something Breaks, We Fix It. No Extra Charge.
+        </li>
+
+        <!-- REPEAT: service item -->
+        <li>
+          <span class="text-accent">•</span>
+          Full Service — One Monthly Price. Includes 1 gallery refresh per month completed within 3 business days. Emergency updates to name, address, and phone number are handled ASAP — usually the same business day.
+        </li>
+
+      </ul>
+    </section>
+
+    <!-- Gallery link section: single card prompting visitors to view the gallery page -->
+    <section class="gallery-link-section">
+      <!-- Single clickable card linking to the full gallery page -->
+      <a href="gallery.html" class="gallery-link-card">
+        <!-- Skull image used as the gallery card thumbnail -->
+        <div class="gallery-link-thumb">
+          <img src="images/skull.webp" alt="View our tattoo gallery" class="gallery-link-thumb-img">
+        </div>
+        <!-- Label displayed on or below the gallery card -->
+        <span class="gallery-link-label">Gallery</span>
+      </a>
+    </section>
+
+    <!-- Pricing section: displays service tiers and monthly rates -->
+    <section class="pricing-section">
+      <!-- Pricing section heading -->
+      <h2 class="pricing-heading">{{PRICING_HEADING}}</h2>
+      <!-- Pricing cards container -->
+      <div class="pricing-grid">
+
+        <!-- REPEAT: pricing card -->
+        <div class="pricing-card">
+          <!-- Plan name -->
+          <h3 class="pricing-plan">Bayou Budget Plan</h3>
+          <!-- Plan price -->
+          <p class="pricing-price">$72.00 / mo</p>
+          <!-- Plan description -->
+          <p class="pricing-desc">A professional website running 24/7 — fully secured, hosted, and managed for you. Includes updates and a 15-image gallery. If anything ever goes wrong, just call. You never have to touch it.</p>
+          <!-- Plan CTA -->
+          <a href="tel:2282098895" class="cta-button">228-209-8895</a>
+        </div>
+
+        <!-- REPEAT: pricing card -->
+        <div class="pricing-card">
+          <h3 class="pricing-plan">Bayou Gallery Pro</h3>
+          <p class="pricing-price">$109.00 / mo</p>
+          <p class="pricing-desc">Everything in the Budget Plan, plus a massive 300-image gallery organized with up to 12 categories. You have the vision — let your gallery do the talking. Attract more clients with a portfolio that's easy to navigate and impossible to ignore.</p>
+          <a href="tel:2282098895" class="cta-button">228-209-8895</a>
+        </div>
+
+      </div>
+
+      <!-- Feature note shown beneath both pricing cards -->
+      <p class="pricing-note">All plans include a professional domain name, full business information, social media links, clickable phone numbers, and an embedded map. Gallery &amp; portfolio updates are available once a month during the 10-day update window and are completed within 3 business days.</p>
+
+    </section>
+
+    <!-- Contact section: business address and directions CTA -->
+    <section class="contact-section">
+      <!-- Full business address displayed for visitors -->
+      <address class="text-header-sub">123 Beach Blvd, Your Town USA</address>
+      <!-- Button that opens Google Maps directions in a new tab -->
+      <a
+        href="{{GOOGLE_MAPS_LINK}}"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="cta-button"
+      >Get Directions</a>
+    </section>
+
+    <!-- Contact form section: allows visitors to send a message directly -->
+    <section id="contact" class="form-section">
+      <form name="contact" method="POST" data-netlify="true">
+        <!-- Required hidden input so Netlify's build bot detects the form -->
+        <input type="hidden" name="form-name" value="contact">
+        <!-- Visitor's full name input -->
+        <label for="contact-name">Name</label>
+        <input
+          id="contact-name"
+          type="text"
+          name="name"
+          autocomplete="name"
+          required
+          class="form-input"
+        >
+
+        <!-- Visitor's email address input -->
+        <label for="contact-email">Email Address</label>
+        <input
+          id="contact-email"
+          type="email"
+          name="email"
+          autocomplete="email"
+          required
+          class="form-input"
+        >
+
+        <!-- Visitor's message body textarea -->
+        <label for="contact-message">Message</label>
+        <textarea
+          id="contact-message"
+          name="message"
+          rows="5"
+          required
+          class="form-input"
+        ></textarea>
+
+        <!-- Form submit button -->
+        <button type="submit" class="cta-button">Lease Now</button>
+      </form>
+    </section>
+
+    <!-- Site footer: copyright, Instagram link, Facebook link -->
+    <footer class="site-footer">
+      <!-- Rental terms disclaimer displayed above copyright -->
+      <p class="text-footer footer-disclaimer">This is a website rental. Bayou Bytes Gulf Coast owns the website and domain name — you own your images and your brand. A 6-month term is required. After 6 months, you may purchase the website outright for $500.00 and own it completely.</p>
+      <!-- Copyright notice with business name and current year -->
+      <p class="text-footer">&copy; 2026 Bayou Bytes Gulf Coast &mdash; A Website Leasing Company. All rights reserved.</p>
+      <!-- Link to business Instagram profile -->
+      <a href="{{INSTAGRAM_URL}}" target="_blank" rel="noopener noreferrer" class="text-footer-link">Instagram</a>
+      <!-- Link to business Facebook profile -->
+      <a href="{{FACEBOOK_URL}}" target="_blank" rel="noopener noreferrer" class="text-footer-link">Facebook</a>
+    </footer>
+
+    <script src="scroll.js"></script>
+  </body>
+</html>
