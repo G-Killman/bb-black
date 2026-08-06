@@ -1,4 +1,24 @@
+# Dependencies
 node_modules/
-staging/
+
+# Local image pipeline (source images and tooling) — not used by the deployed site
 raw-images/
+process-images.js
+package.json
+package-lock.json
+
+# Unused assets
 images/hero.webp
+images/skull.webp
+
+# Environment / secrets
+.env
+.env.*
+
+# Editor and OS junk
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+*.log
