@@ -25,6 +25,11 @@ html {
   box-sizing: inherit;
 }
 
+/* Consistent separation between the page's top-level sections */
+body > section:not(:last-of-type) {
+  margin-bottom: 60px;
+}
+
 /* Sticky top navigation bar; stacks name above phone on small screens */
 .site-header {
   background-color: var(--color-primary);
@@ -202,6 +207,89 @@ html {
 /* Accent-colored bullet marker spans inside service items */
 .text-accent {
   color: var(--color-accent);
+}
+
+/* Origin story section placed between services and pricing */
+.origin-section {
+  background: linear-gradient(135deg, #000000 0%, #1f2937 100%);
+  color: var(--color-secondary);
+  padding: 3rem 1.25rem;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .origin-section {
+    padding: 4rem 2rem;
+  }
+}
+
+.origin-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.origin-kicker {
+  color: var(--color-accent);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  margin: 0 0 0.75rem;
+  text-transform: uppercase;
+}
+
+.origin-heading {
+  color: var(--color-secondary);
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 0 1.25rem;
+}
+
+.origin-copy {
+  color: #e5e7eb;
+  font-size: 1rem;
+  line-height: 1.7;
+  margin: 0 0 1rem;
+}
+
+.origin-copy:last-child {
+  margin-bottom: 0;
+}
+
+/* Process section explaining the path from first contact to launch */
+.process-section {
+  background: linear-gradient(135deg, #000000 0%, #1f2937 100%);
+  color: var(--color-secondary);
+  padding: 3rem 1.25rem;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .process-section {
+    padding: 4rem 2rem;
+  }
+}
+
+.process-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.process-heading {
+  color: var(--color-secondary);
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 0 1.25rem;
+}
+
+.process-copy {
+  color: #e5e7eb;
+  font-size: 1rem;
+  line-height: 1.7;
+  margin: 0 0 1rem;
+}
+
+.process-copy:last-child {
+  margin-bottom: 0;
 }
 
 /* Homepage gallery teaser section; horizontal white → gray → white gradient */
@@ -522,6 +610,12 @@ html {
   width: 100%;
   max-width: 600px;
   margin: 0 auto;
+}
+
+.form-heading {
+  color: var(--color-primary);
+  font-size: 1.5rem;
+  margin: 0 0 0.75rem;
 }
 
 .form-section label {
