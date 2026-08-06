@@ -551,6 +551,11 @@ html {
   outline: 2px solid var(--color-accent);
 }
 
+/* Netlify honeypot wrapper; must stay hidden from real visitors */
+.form-honeypot {
+  display: none;
+}
+
 /* Page footer */
 .site-footer {
   background-color: var(--color-primary);

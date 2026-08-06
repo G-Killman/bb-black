@@ -114,9 +114,13 @@
 
     <!-- Contact form section: allows visitors to send a message directly -->
     <section id="contact" class="form-section">
-      <form name="contact" method="POST" data-netlify="true">
+      <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
         <!-- Required hidden input so Netlify's build bot detects the form -->
         <input type="hidden" name="form-name" value="contact">
+        <!-- Honeypot: hidden from people, bots that fill it get their submission discarded -->
+        <p class="form-honeypot">
+          <label>Leave this field empty <input name="bot-field" tabindex="-1" autocomplete="off"></label>
+        </p>
         <!-- Visitor's full name input -->
         <label for="contact-name">Name</label>
         <input
