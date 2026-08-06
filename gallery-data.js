@@ -12,4 +12,8 @@ const galleryCategories = [
     folder: 'gallery-3',
     name: 'Gallery 3',
   },
+  {
+    folder: 'test',
+    name: 'Gallery 4',
+  },
 ];
