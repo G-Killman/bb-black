@@ -45,6 +45,98 @@ body > section:not(:last-of-type) {
   width: 100%;
 }
 
+/* Terms of Service page content */
+.terms-page {
+  background-color: #f5f5f5;
+  color: var(--color-primary);
+  padding: 3rem 1.25rem;
+}
+
+.terms-content {
+  background-color: var(--color-secondary);
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1.25rem;
+}
+
+.terms-content h1,
+.terms-content h2 {
+  color: var(--color-primary);
+}
+
+.terms-content h1 {
+  font-size: 2rem;
+  line-height: 1.2;
+  margin: 0 0 0.5rem;
+  text-transform: uppercase;
+}
+
+.terms-business-name {
+  font-weight: 700;
+  margin: 0 0 2rem;
+}
+
+.terms-content h2 {
+  border-top: 1px solid var(--color-neutral);
+  font-size: 1.25rem;
+  line-height: 1.4;
+  margin: 2rem 0 1rem;
+  padding-top: 1rem;
+}
+
+.terms-content p,
+.terms-content li {
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.terms-content p {
+  margin: 0 0 1rem;
+}
+
+.terms-content ul {
+  margin: 0 0 1rem;
+  padding-left: 1.25rem;
+}
+
+.terms-content li {
+  margin-bottom: 0.75rem;
+}
+
+.terms-table-wrapper {
+  overflow-x: auto;
+  margin: 1rem 0 1.25rem;
+}
+
+.terms-content table {
+  border-collapse: collapse;
+  min-width: 700px;
+  width: 100%;
+}
+
+.terms-content th,
+.terms-content td {
+  border: 1px solid var(--color-neutral);
+  padding: 0.75rem;
+  text-align: left;
+  vertical-align: top;
+}
+
+.terms-content th {
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+}
+
+@media (min-width: 768px) {
+  .terms-page {
+    padding: 4rem 2rem;
+  }
+
+  .terms-content {
+    padding: 3rem;
+  }
+}
+
 @media (min-width: 768px) {
   .site-header {
     flex-direction: row;
