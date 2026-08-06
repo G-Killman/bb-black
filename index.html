@@ -3,9 +3,61 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bayou Bytes Gulf Coast</title>
+    <title>Bayou Bytes Gulf Coast — Web Design in Biloxi, MS</title>
+
+    <!-- Search engine metadata -->
+    <meta name="description" content="Web design company in Biloxi, Mississippi. We lease portfolio-inspired websites with large photo galleries, hosting, management, and monthly updates — serving Biloxi, Gulfport, the Mississippi Coast, Alabama, Louisiana, and Florida.">
+    <meta name="keywords" content="web design Biloxi, web design Gulfport, Mississippi Gulf Coast web design, website leasing, Alabama web design, Louisiana web design, Florida web design">
+    <meta name="author" content="Bayou Bytes Gulf Coast">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#000000">
+    <link rel="canonical" href="https://bayoubytes-gc.com/">
+
+    <!-- Local search signals; region only, this is an online business with no storefront -->
+    <meta name="geo.region" content="US-MS">
+    <meta name="geo.placename" content="Biloxi, Mississippi">
+
+    <!-- Open Graph (Facebook, LinkedIn, iMessage previews) -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Bayou Bytes Gulf Coast">
+    <meta property="og:title" content="Bayou Bytes Gulf Coast — Web Design in Biloxi, MS">
+    <meta property="og:description" content="Web design company in Biloxi, Mississippi serving Biloxi, Gulfport, the Mississippi Coast, Alabama, Louisiana, and Florida.">
+    <meta property="og:url" content="https://bayoubytes-gc.com/">
+    <meta property="og:image" content="https://bayoubytes-gc.com/images/hero-desktop.webp">
+    <meta property="og:image:alt" content="Bayou Bytes Gulf Coast">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter/X card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Bayou Bytes Gulf Coast — Web Design in Biloxi, MS">
+    <meta name="twitter:description" content="Web design company in Biloxi, Mississippi serving Biloxi, Gulfport, the Mississippi Coast, Alabama, Louisiana, and Florida.">
+    <meta name="twitter:image" content="https://bayoubytes-gc.com/images/hero-desktop.webp">
+
     <link rel="stylesheet" href="styles.css">
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Structured data; Organization rather than LocalBusiness because there is no storefront -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Bayou Bytes Gulf Coast",
+      "description": "Online web design company based in Biloxi, Mississippi providing portfolio-inspired website leasing with large photo galleries, hosting, management, and monthly updates.",
+      "url": "https://bayoubytes-gc.com/",
+      "telephone": "+1-228-209-8895",
+      "image": "https://bayoubytes-gc.com/images/hero-desktop.webp",
+      "areaServed": [
+        { "@type": "City", "name": "Biloxi" },
+        { "@type": "City", "name": "Gulfport" },
+        { "@type": "Place", "name": "Mississippi Gulf Coast" },
+        { "@type": "State", "name": "Mississippi" },
+        { "@type": "State", "name": "Alabama" },
+        { "@type": "State", "name": "Louisiana" },
+        { "@type": "State", "name": "Florida" }
+      ],
+      "sameAs": ["{{INSTAGRAM_URL}}", "{{FACEBOOK_URL}}"]
+    }
+    </script>
   </head>
   <body>
 
@@ -97,19 +149,6 @@
       <!-- Feature note shown beneath both pricing cards -->
       <p class="pricing-note">All plans include a professional domain name, full business information, social media links, clickable phone numbers, and an embedded map. Gallery &amp; portfolio updates are available once a month during the 5-business-day update window and are completed within 3 business days.</p>
 
-    </section>
-
-    <!-- Contact section: business address and directions CTA -->
-    <section class="contact-section">
-      <!-- Full business address displayed for visitors -->
-      <address class="text-header-sub">123 Beach Blvd, Your Town USA</address>
-      <!-- Button that opens Google Maps directions in a new tab -->
-      <a
-        href="{{GOOGLE_MAPS_LINK}}"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="cta-button"
-      >Get Directions</a>
     </section>
 
     <!-- Contact form section: allows visitors to send a message directly -->
