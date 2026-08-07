@@ -246,6 +246,43 @@ body > section:not(:last-of-type) {
   background-color: #000000;
 }
 
+/* Service area section placed between the hero and origin content */
+.service-area-section {
+  background-color: #0f172a;
+  color: var(--color-secondary);
+  padding: 1rem 1.25rem;
+  width: 100%;
+}
+
+.service-area-content {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.service-area-kicker {
+  margin: 0 0 0.4rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.service-area-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1rem;
+  margin: 0;
+  padding: 0;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.service-area-list li::before {
+  content: "•";
+  margin-right: 0.35rem;
+}
+
 /* CTA button interactive states */
 .cta-button:hover,
 .cta-button:focus {
