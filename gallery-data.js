@@ -2,11 +2,11 @@
 const galleryCategories = [
   {
     folder: 'gallery-1',
-    name: 'Gallery 1',
+    name: 'Puppies',
   },
   {
     folder: 'gallery-2',
-    name: 'Gallery 2',
+    name: 'Fish',
   },
   {
     folder: 'gallery-3',

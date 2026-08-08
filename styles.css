@@ -246,6 +246,19 @@ body > section:not(:last-of-type) {
   background-color: #000000;
 }
 
+.gallery-home-button {
+  font-size: 0.7rem;
+  padding: 0.35rem 0.8rem;
+  margin-top: 3rem;
+  width: auto;
+}
+
+.gallery-return-button {
+  font-size: 0.7rem;
+  padding: 0.35rem 0.8rem;
+  width: auto;
+}
+
 /* Service area section placed between the hero and origin content */
 .service-area-section {
   background-color: #0f172a;
