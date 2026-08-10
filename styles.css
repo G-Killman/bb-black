@@ -732,6 +732,12 @@ body > section:not(:last-of-type) {
   gap: 0.75rem;
 }
 
+@media (min-width: 768px) {
+  .pricing-card .cta-button {
+    margin-top: auto;
+  }
+}
+
 /* Plan name inside pricing card */
 .pricing-plan {
   color: var(--color-primary);
