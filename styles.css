@@ -195,22 +195,34 @@ body > section:not(:last-of-type) {
 .text-hero {
   color: var(--color-secondary);
   font-weight: 900;
-  background-color: rgba(0, 0, 0, 0.85);
-  padding: 0.1em 0.35em;
+  background-color: rgba(0, 0, 0, 0.01);
+  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
+  border-radius: 0.2rem;
+  padding: 0.01em 0.08em;
   display: inline;
+  line-height: 1;
   -webkit-box-decoration-break: clone;
   box-decoration-break: clone;
+  border: 0;
+  box-shadow: none;
 }
 
 /* Supporting tagline inside hero */
 .text-hero-sub {
   color: var(--color-secondary);
   font-weight: 700;
-  background-color: rgba(0, 0, 0, 0.85);
-  padding: 0.1em 0.35em;
+  background-color: rgba(0, 0, 0, 0.01);
+  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
+  border-radius: 0.2rem;
+  padding: 0.01em 0.08em;
   display: inline;
+  line-height: 1;
   -webkit-box-decoration-break: clone;
   box-decoration-break: clone;
+  border: 0;
+  box-shadow: none;
 }
 
 /* Primary call-to-action button — full-width on mobile, inline on larger screens */
@@ -270,6 +282,15 @@ body > section:not(:last-of-type) {
 .service-area-content {
   max-width: 1100px;
   margin: 0 auto;
+}
+
+.service-area-gallery-link {
+  text-align: center;
+  margin-bottom: 0.75rem;
+}
+
+.service-area-gallery-link .cta-button {
+  margin-top: 0;
 }
 
 .service-area-kicker {
