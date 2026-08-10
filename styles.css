@@ -270,13 +270,17 @@ body > section:not(:last-of-type) {
 }
 
 /* Smaller variant of the CTA used inside the hero */
-.hero-cta {
+.hero-cta,
+.gallery-header-button,
+.site-header .cta-button {
+  border: 3px solid var(--color-accent);
+  color: #000000;
   font-size: 0.8rem;
   padding: 0.5rem 1.25rem;
   width: auto;
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  background-color: #000000;
+  background: #ffffff;
 }
 
 .gallery-header-button {
