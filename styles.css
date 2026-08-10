@@ -195,7 +195,7 @@ body > section:not(:last-of-type) {
 .text-hero {
   color: var(--color-secondary);
   font-weight: 900;
-  background-color: rgba(0, 0, 0, 0.01);
+  background-color: rgba(0, 0, 0, 0.08);
   -webkit-backdrop-filter: blur(2px);
   backdrop-filter: blur(2px);
   border-radius: 0.2rem;
@@ -212,7 +212,7 @@ body > section:not(:last-of-type) {
 .text-hero-sub {
   color: var(--color-secondary);
   font-weight: 700;
-  background-color: rgba(0, 0, 0, 0.01);
+  background-color: rgba(0, 0, 0, 0.08);
   -webkit-backdrop-filter: blur(2px);
   backdrop-filter: blur(2px);
   border-radius: 0.2rem;
@@ -761,7 +761,7 @@ body > section:not(:last-of-type) {
 
 /* Contact form; same light gray → black → light gray gradient as the directions section */
 .form-section {
-  background: linear-gradient(135deg, #e5e7eb 0%, #000000 50%, #e5e7eb 100%);
+  background: #e5e7eb;
   padding: 3rem 1.25rem;
   width: 100%;
 }
