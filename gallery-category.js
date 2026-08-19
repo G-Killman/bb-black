@@ -15,6 +15,34 @@ var grid = document.getElementById('category-grid');
 var items = [];
 var currentIndex = 0;
 
+function getImageAltText(num) {
+  if (folder === 'manicure-lookbook-web-design') {
+    var manicureAltTexts = [
+      'Manicure lookbook demo Bayou Bytes Gulf Coast web design Biloxi photo ' + num,
+      'Manicure lookbook demo Bayou Bytes Gulf Coast web design Gulfport photo ' + num,
+      'Manicure lookbook demo Bayou Bytes Gulf Coast web design Ocean Springs photo ' + num,
+      'Manicure lookbook demo Bayou Bytes Gulf Coast web design Mississippi Gulf Coast photo ' + num,
+      'Manicure lookbook demo Bayou Bytes Gulf Coast web design photo ' + num,
+    ];
+
+    return manicureAltTexts[(num - 1) % manicureAltTexts.length];
+  }
+
+  if (folder === 'pedicure-lookbook-demo-web-design') {
+    var pedicureAltTexts = [
+      'Pedicure lookbook demo Bayou Bytes Gulf Coast web design Biloxi photo ' + num,
+      'Pedicure lookbook demo Bayou Bytes Gulf Coast web design Gulfport photo ' + num,
+      'Pedicure lookbook demo Bayou Bytes Gulf Coast web design Ocean Springs photo ' + num,
+      'Pedicure lookbook demo Bayou Bytes Gulf Coast web design Mississippi Gulf Coast photo ' + num,
+      'Pedicure lookbook demo Bayou Bytes Gulf Coast web design photo ' + num,
+    ];
+
+    return pedicureAltTexts[(num - 1) % pedicureAltTexts.length];
+  }
+
+  return displayName + ' photo ' + num;
+}
+
 for (var i = 1; i <= 50; i++) {
   (function (num) {
     var src = 'staging/' + folder + '_processed/' + folder + '-' + num + '.webp';
@@ -25,7 +53,7 @@ for (var i = 1; i <= 50; i++) {
 
     var img = document.createElement('img');
     img.src = src;
-    img.alt = displayName + ' photo ' + num;
+    img.alt = getImageAltText(num);
     img.className = 'category-thumb-img';
 
     img.addEventListener('error', function () {
@@ -66,7 +94,7 @@ function showImage() {
   var visible = visibleItems();
   if (visible.length === 0) return;
   lightboxImg.src = visible[currentIndex].src;
-  lightboxImg.alt = displayName + ' photo ' + (currentIndex + 1);
+  lightboxImg.alt = getImageAltText(currentIndex + 1);
 }
 
 function closeLightbox() {

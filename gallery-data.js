@@ -1,19 +1,11 @@
-// Add or remove categories here. 'folder' must match the raw-images subfolder name exactly.
+// Add or remove categories here. 'folder' must match the staging folder base name.
 const galleryCategories = [
   {
-    folder: 'gallery-1',
-    name: 'Puppies',
+    folder: 'manicure-lookbook-web-design',
+    name: 'Manicure Lookbook',
   },
   {
-    folder: 'gallery-2',
-    name: 'Fish',
-  },
-  {
-    folder: 'gallery-3',
-    name: 'Gallery 3',
-  },
-  {
-    folder: 'test',
-    name: 'Gallery 4',
+    folder: 'pedicure-lookbook-demo-web-design',
+    name: 'Pedicure Lookbook',
   },
 ];
