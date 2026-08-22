@@ -8,8 +8,32 @@ if (!folder) {
 var category = galleryCategories.find(function (c) { return c.folder === folder; });
 var displayName = category ? category.name : folder;
 
+if (folder === 'pedicure-lookbook-demo-web-design') {
+  displayName = 'Pedicure Lookbook';
+  document.body.classList.add('pedicure-lookbook-page');
+}
+
+if (folder === 'manicure-lookbook-web-design') {
+  displayName = 'Manicure Lookbook';
+  document.body.classList.add('manicure-lookbook-page');
+}
+
 document.getElementById('category-title').textContent = displayName;
 document.title = document.title.replace('Gallery', displayName);
+
+if (folder === 'pedicure-lookbook-demo-web-design') {
+  var heroBrand = document.querySelector('.gallery-hero-brand');
+  if (heroBrand) {
+    heroBrand.style.display = 'none';
+  }
+}
+
+if (folder === 'manicure-lookbook-web-design') {
+  var manicureHeroBrand = document.querySelector('.gallery-hero-brand');
+  if (manicureHeroBrand) {
+    manicureHeroBrand.style.display = 'none';
+  }
+}
 
 var grid = document.getElementById('category-grid');
 var items = [];
