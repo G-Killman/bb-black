@@ -880,17 +880,16 @@ body > section:not(:last-of-type) {
 
 /* Note beneath all pricing cards listing features shared by every plan */
 .pricing-note {
-  color: #000000;
-  font-size: 0.85rem;
+  color: #6b7280;
+  font-size: 0.8rem;
   line-height: 1.7;
-  font-weight: 700;
+  font-weight: 400;
   max-width: 700px;
   margin: 2rem auto 0;
-  background-color: #f8fafc;
-  border: 2px solid #000000;
-  border-radius: 0.5rem;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
-  padding: 1.25rem 1.25rem 0.9rem;
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+  padding: 0;
 }
 
 /* Address and directions section; light gray → black → light gray gradient */
