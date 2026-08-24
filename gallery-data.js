@@ -8,4 +8,16 @@ const galleryCategories = [
     folder: 'pedicure-lookbook-demo-web-design',
     name: 'Pedicure Lookbook',
   },
+  {
+    folder: 'black-gray tat',
+    name: 'Black Gray Tattoo',
+  },
+  {
+    folder: 'americanoriginal',
+    name: 'American Original',
+  },
+  {
+    folder: 'dogpaintings',
+    name: 'Dog Paintings',
+  },
 ];

@@ -1,7 +1,7 @@
 var grid = document.getElementById('gallery-grid');
 
 galleryCategories.forEach(function (category) {
-  var thumb = 'staging/' + category.folder + '_processed/' + category.folder + '-1.webp';
+  var thumb = encodeURI('staging/' + category.folder + '_processed/' + category.folder + '-1.webp');
   var link = 'gallery-category.html?folder=' + encodeURIComponent(category.folder);
 
   var card = document.createElement('a');

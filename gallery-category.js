@@ -18,6 +18,21 @@ if (folder === 'manicure-lookbook-web-design') {
   document.body.classList.add('manicure-lookbook-page');
 }
 
+if (folder === 'black-gray tat') {
+  displayName = 'Black and Gray Lookbook';
+  document.body.classList.add('black-gray-tat-page');
+}
+
+if (folder === 'americanoriginal') {
+  displayName = 'American Original Lookbook';
+  document.body.classList.add('americanoriginal-page');
+}
+
+if (folder === 'dogpaintings') {
+  displayName = 'Dog Paintings Lookbook';
+  document.body.classList.add('dogpaintings-page');
+}
+
 document.getElementById('category-title').textContent = displayName;
 document.title = document.title.replace('Gallery', displayName);
 
@@ -32,6 +47,27 @@ if (folder === 'manicure-lookbook-web-design') {
   var manicureHeroBrand = document.querySelector('.gallery-hero-brand');
   if (manicureHeroBrand) {
     manicureHeroBrand.style.display = 'none';
+  }
+}
+
+if (folder === 'black-gray tat') {
+  var blackGrayHeroBrand = document.querySelector('.gallery-hero-brand');
+  if (blackGrayHeroBrand) {
+    blackGrayHeroBrand.style.display = 'none';
+  }
+}
+
+if (folder === 'americanoriginal') {
+  var americanOriginalHeroBrand = document.querySelector('.gallery-hero-brand');
+  if (americanOriginalHeroBrand) {
+    americanOriginalHeroBrand.style.display = 'none';
+  }
+}
+
+if (folder === 'dogpaintings') {
+  var dogPaintingsHeroBrand = document.querySelector('.gallery-hero-brand');
+  if (dogPaintingsHeroBrand) {
+    dogPaintingsHeroBrand.style.display = 'none';
   }
 }
 
@@ -64,12 +100,48 @@ function getImageAltText(num) {
     return pedicureAltTexts[(num - 1) % pedicureAltTexts.length];
   }
 
+  if (folder === 'black-gray tat') {
+    var tattooAltTexts = [
+      'Black and gray tattoo Bayou Bytes Gulf Coast web design photo ' + num,
+      'Black and gray tattoo gallery Bayou Bytes Gulf Coast photo ' + num,
+      'Tattoo gallery Bayou Bytes Gulf Coast black and gray photo ' + num,
+      'Black and gray tattoo Mississippi Gulf Coast photo ' + num,
+      'Black and gray tattoo photo ' + num,
+    ];
+
+    return tattooAltTexts[(num - 1) % tattooAltTexts.length];
+  }
+
+  if (folder === 'americanoriginal') {
+    var americanOriginalAltTexts = [
+      'American Original tattoo Bayou Bytes Gulf Coast web design photo ' + num,
+      'American Original tattoo gallery Bayou Bytes Gulf Coast photo ' + num,
+      'Tattoo gallery Bayou Bytes Gulf Coast American Original photo ' + num,
+      'American Original tattoo Mississippi Gulf Coast photo ' + num,
+      'American Original tattoo photo ' + num,
+    ];
+
+    return americanOriginalAltTexts[(num - 1) % americanOriginalAltTexts.length];
+  }
+
+  if (folder === 'dogpaintings') {
+    var dogPaintingsAltTexts = [
+      'Dog paintings Bayou Bytes Gulf Coast web design photo ' + num,
+      'Dog painting gallery Bayou Bytes Gulf Coast photo ' + num,
+      'Dog portrait gallery Bayou Bytes Gulf Coast photo ' + num,
+      'Dog paintings Mississippi Gulf Coast photo ' + num,
+      'Dog paintings photo ' + num,
+    ];
+
+    return dogPaintingsAltTexts[(num - 1) % dogPaintingsAltTexts.length];
+  }
+
   return displayName + ' photo ' + num;
 }
 
 for (var i = 1; i <= 50; i++) {
   (function (num) {
-    var src = 'staging/' + folder + '_processed/' + folder + '-' + num + '.webp';
+    var src = encodeURI('staging/' + folder + '_processed/' + folder + '-' + num + '.webp');
     var itemIndex = num - 1;
 
     var item = document.createElement('div');
