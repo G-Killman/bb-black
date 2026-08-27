@@ -227,6 +227,36 @@ lightbox.addEventListener('click', function (e) {
   if (e.target === lightbox) closeLightbox();
 });
 
+var touchStartX = null;
+var touchStartY = null;
+
+lightbox.addEventListener('touchstart', function (e) {
+  if (!lightbox.classList.contains('lightbox--open') || e.touches.length !== 1) return;
+  touchStartX = e.touches[0].clientX;
+  touchStartY = e.touches[0].clientY;
+}, { passive: true });
+
+lightbox.addEventListener('touchend', function (e) {
+  if (!lightbox.classList.contains('lightbox--open')) return;
+  if (touchStartX === null || touchStartY === null) return;
+
+  var touch = e.changedTouches[0];
+  var deltaX = touch.clientX - touchStartX;
+  var deltaY = touch.clientY - touchStartY;
+  var swipeThreshold = 50;
+
+  if (Math.abs(deltaX) > Math.abs(deltaY) && Math.abs(deltaX) > swipeThreshold) {
+    if (deltaX < 0) {
+      nextImage();
+    } else {
+      prevImage();
+    }
+  }
+
+  touchStartX = null;
+  touchStartY = null;
+}, { passive: true });
+
 document.addEventListener('keydown', function (e) {
   if (!lightbox.classList.contains('lightbox--open')) return;
   if (e.key === 'Escape') closeLightbox();
