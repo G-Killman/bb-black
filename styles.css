@@ -977,13 +977,6 @@ body > section:not(:last-of-type) {
   }
 }
 
-@media (max-width: 767px) {
-  .lightbox-prev,
-  .lightbox-next {
-    display: none;
-  }
-}
-
 .lightbox {
   flex-direction: column;
   gap: 1rem;
