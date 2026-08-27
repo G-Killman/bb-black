@@ -7,6 +7,25 @@ if (!folder) {
 
 var category = galleryCategories.find(function (c) { return c.folder === folder; });
 var displayName = category ? category.name : folder;
+var pageUrl = window.location.origin + window.location.pathname + '?folder=' + encodeURIComponent(folder);
+var pageTitle = 'Bayou Bytes Gulf Coast — ' + displayName + ' Gallery';
+var pageDescription = 'Browse ' + displayName.toLowerCase() + ' images from Bayou Bytes Gulf Coast, a subscription website design service in Biloxi, Mississippi.';
+
+function setMeta(selector, attribute, value) {
+  var element = document.querySelector(selector);
+  if (element) {
+    element.setAttribute(attribute, value);
+  }
+}
+
+setMeta('link[rel="canonical"]', 'href', pageUrl);
+setMeta('meta[property="og:title"]', 'content', pageTitle);
+setMeta('meta[property="og:description"]', 'content', pageDescription);
+setMeta('meta[property="og:url"]', 'content', pageUrl);
+setMeta('meta[name="twitter:title"]', 'content', pageTitle);
+setMeta('meta[name="twitter:description"]', 'content', pageDescription);
+setMeta('meta[name="description"]', 'content', pageDescription);
+setMeta('meta[property="og:image:alt"]', 'content', displayName + ' gallery');
 
 if (folder === 'pedicure-lookbook-demo-web-design') {
   displayName = 'Pedicure Lookbook';
@@ -34,7 +53,35 @@ if (folder === 'dogpaintings') {
 }
 
 document.getElementById('category-title').textContent = displayName;
-document.title = document.title.replace('Gallery', displayName);
+document.title = pageTitle;
+
+pageTitle = 'Bayou Bytes Gulf Coast — ' + displayName + ' Gallery';
+pageDescription = 'Browse ' + displayName.toLowerCase() + ' images from Bayou Bytes Gulf Coast, a subscription website design service in Biloxi, Mississippi.';
+
+setMeta('link[rel="canonical"]', 'href', pageUrl);
+setMeta('meta[property="og:title"]', 'content', pageTitle);
+setMeta('meta[property="og:description"]', 'content', pageDescription);
+setMeta('meta[property="og:url"]', 'content', pageUrl);
+setMeta('meta[name="twitter:title"]', 'content', pageTitle);
+setMeta('meta[name="twitter:description"]', 'content', pageDescription);
+setMeta('meta[name="description"]', 'content', pageDescription);
+setMeta('meta[property="og:image:alt"]', 'content', displayName + ' gallery');
+
+var jsonLd = document.querySelector('script[type="application/ld+json"]');
+if (jsonLd) {
+  jsonLd.textContent = JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    'name': pageTitle,
+    'description': pageDescription,
+    'url': pageUrl,
+    'isPartOf': {
+      '@type': 'WebSite',
+      'name': 'Bayou Bytes Gulf Coast',
+      'url': 'https://bayoubytes-gc.com/'
+    }
+  }, null, 2);
+}
 
 if (folder === 'pedicure-lookbook-demo-web-design') {
   var heroBrand = document.querySelector('.gallery-hero-brand');
