@@ -9,7 +9,7 @@ var category = galleryCategories.find(function (c) { return c.folder === folder;
 var displayName = category ? category.name : folder;
 var pageUrl = window.location.origin + window.location.pathname + '?folder=' + encodeURIComponent(folder);
 var pageTitle = 'Bayou Bytes Gulf Coast — ' + displayName + ' Gallery';
-var pageDescription = 'Browse ' + displayName.toLowerCase() + ' images from Bayou Bytes Gulf Coast, a subscription website design service in Biloxi, Mississippi.';
+var pageDescription = 'Browse ' + displayName.toLowerCase() + ' images from Bayou Bytes Gulf Coast, a website design service in Biloxi, Mississippi.';
 
 function setMeta(selector, attribute, value) {
   var element = document.querySelector(selector);
@@ -56,7 +56,7 @@ document.getElementById('category-title').textContent = displayName;
 document.title = pageTitle;
 
 pageTitle = 'Bayou Bytes Gulf Coast — ' + displayName + ' Gallery';
-pageDescription = 'Browse ' + displayName.toLowerCase() + ' images from Bayou Bytes Gulf Coast, a subscription website design service in Biloxi, Mississippi.';
+pageDescription = 'Browse ' + displayName.toLowerCase() + ' images from Bayou Bytes Gulf Coast, a website design service in Biloxi, Mississippi.';
 
 setMeta('link[rel="canonical"]', 'href', pageUrl);
 setMeta('meta[property="og:title"]', 'content', pageTitle);
@@ -78,7 +78,7 @@ if (jsonLd) {
     'isPartOf': {
       '@type': 'WebSite',
       'name': 'Bayou Bytes Gulf Coast',
-      'url': 'https://bayoubytes-gc.com/'
+      'url': 'https://www.bayoubytesgulfcoast.com/'
     }
   }, null, 2);
 }
